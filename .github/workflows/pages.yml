@@ -1,0 +1,51 @@
+name: Pubblica Calcolo Z con logo
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scarica il progetto
+        uses: actions/checkout@v4
+      - name: Prepara Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Configura GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Genera sito con logo e icone
+        run: node build.js
+      - name: Verifica i file generati
+        run: |
+          test -s dist/index.html
+          test -s dist/app-icon.png
+          grep -q 'class="app-logo"' dist/index.html
+          grep -q 'apple-touch-icon' dist/index.html
+          touch dist/.nojekyll
+      - name: Carica il sito
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Pubblica su GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
