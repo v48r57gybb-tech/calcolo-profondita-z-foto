@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fdf3df">
+<meta name="apple-mobile-web-app-title" content="Calcolo Z">
+<title>Calcolo profondità Z con foto</title>
+<link rel="icon" type="image/png" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0BAMAAADP4xsBAAAAGFBMVEUMKUD///9VrcPAwMNVYnOI0+WCjpy+9PjJmCmgAAAJaElEQVR42u2a23MT1xnAfzq7WhoMigyTScb4sshhkmDkyihOZ4ohonj8QAyhpWEmQzE2Me5DJ/9Ipw99Tp1GQ5KZTDMkbsLkweM2G3Ayk8R2NthA4sTilItxDbZFLtDK2t0+rCQkS5ZkGt72PMnn7P7Ot9/5Luc7x75aHlQTeGgP7aE9tIf20B7aQ3toD+2hPbSH9tAe+qdCawO9941Wyw/velt5QFL3m1ixB4OeAS4+EPSACdgDJddgYKAS2rf6UctAYtz9oeysixdw66MkELoViN8fuv/0vd/R+jzIidsy+8kN5eCrobVdZv6fSneWoTUFMr8ShAjVrM5WHipDjt4AlN+sm8P59khmqlCGLIO1tUjnVpe5xmU8aoLyggFA+uPDYJ1xfWdbVuY9OqBjX+hdG1pNQvutV44RRbFmU4OHI1hnAE5myfzrvA6AfX4NCtkW211v0D6M1nh9sufcix8dMSdmn5lz9szkBAnVBqRz84kkgG/3hWrRJxdvfyyFeh7suQPmOFP+n0mszkv8+472fBIglLhxYw6y7KV1ySoVsphIIJ6dB2K+OJCOTAGDh9lJgwRoypg71hchAB6pUtciAYgAoAZbAThnxYDBw8MiCNCUZxLj3wHYh6qza/8OCf55oO/9W27X3gvzADQHc+QoljuDEgDE59VbiA5o32XHmpd7AUQQECYQrU0kIBoFLH1VsVcPT8ev7IeBgYFeTkXODAB9gFgA2hKAqSQSmyPwhQ5cqcpCxKNJCH8FWze9eSL4z4sXv/7lrwKXLu6Z0RygcQ7aJCDqbHC+f2KOm+vAV8pIitDqY0uIpST+h7b8ODEHMPf1+hvcuCseBXE5Q8Z3B8D5/i7OU0nYeL2KBOYQoumdAWa+3HAra2TjoNIINCzgc8Oe7Q7Zmxc4HwCnGl03srUpIBbGFy0TiG6ORgDYrwVBmChB97VQKMOOYOmlF3Kl8WlhwnGag7YE2hrjmcCt3PK3gpPMqKMpEM9GV7GAEgBnoiLa3+pMoIUTwOO1w7kI659vDsJSxoxvT7ui/1q6hl5b0rRXKqSHRkjbOoitGTKpZrYTAQGtADenM8p4Vweugg62XhGdxAQFKfTQ33Kdg7/VhYQGkEBzNn9hv+dq+zwQqWQhmhQSLIRuW3ndf8EPmPgAcW9KlpNBkFjAbCWpHSxAKR5oBOGKdjO/+7L7tF7K/FYQbGzgoNATNBYMRMACCUIWPJ8EO4IJdm8FtE4S/DJEyI2guSZBRwG2FL5wBZAIwKiAjhBDO+gLIG7Hix+zgcIZWc7or8Q6rkBLEeeYrE9SM10YagCTCDjxIpPCxnK/qxxaAzTT+UAKo9SqSFasQEYjEXT33TLoNBYNLKaxijwpJ/qK5j5pQro8WkEVQUcqRQHRyDJyu+0TOZvK01lZb0xtpZUe6kqlDRtEVtUnv8xLdrJkshIrvntbUIljFH13xM2XOUVtm8i9aGYEtsui/SYJtq+aLXPmpTUH7vXmVNRbDn0QUOKudZepqrQD+cZ9qprtZJ4Pl9vuiwMyTzUFS70qWnHtr1Ray/cHRRZPZ1WTG8vXiSlgOVlFwVkKbZVc7awtaABX9SKrVCqgrfLS2DFce08FocDyRUWpbT2ra0pVEdKAoNa/CUrvp2PlFPIe8JEOZtFq62ATQYn3nFbxyxU+WoWul5M4HauUDwT9knlthv0cRInc81c9a3nxsssoDfvp1CFiRXHdRIk34kh7UokLyfxr94Z2gIVdMcsIzr7e+yanSuTneRFkkd3hHfQhpJ3MafZaRtGiPNqC1AepI1ZR8I19KPs4K7XJSV0z2QJX43kA3RW9vF3HFJZ7X+3Ht+KxeI82lt5FT2Rn3IGg6zuuixmZ/BArj7bTNrzfYeqs2Hk6Q87oaEST1HEQJX/BGmOuVtJ2pc1CWsf+4R9Jrh5a4W/7O5x4j3k+LiTz+SMbQKDkLGV1tEkELnckSb9e6DXiDaOVmfB2tnI236z9o6QtbKNE1lxRcPxwp3YOp/stXdQ/9FX+QOjJa3fUpZsXtSY68gcObELoc74nOXu3gtRCPQu8BqgFIV4E00c5hsDCGMrvj4NhsqNUHFnR40v7soG1IJhtNUaHtCH2082+/P4DGOlnQcLeSuhUb4dewsn9ZsduevDH/W8U5M6TcdKGjm/USNdVLO46Zh++Dv/VYUtTrmATO0Jnl3j4sUdkw/YPL4nj2RUTaQmaQ3iTvPKsWbGWWRQ1aGGAkd9nNukibNA3pAa5JRboG3p+tiWe64d9STYaqqipKLUanXkqaWmf6YzE/v7iL0zgZNpAS2gdj9bPhGa1hP/TbzasS4IWqjcANYjvM3vP49crlqSpJJs3L1zpGKF/MPZq5wtg/xHUFtkzRLe2gV1m3Twj+0TUliNuKW+yYwyjrZpDi8U0Wo3QNyq3x3Lzh6W2C/+wkuTlUwugnmA6E0O7FlA+o5Q+SqTdNGrqkJ2Y+mj305mI0xmWHJ2crKM77cSPAZhmhqwuwHro2FXNyYL6I3v0u9fxR5emnmsJSDr3Nhr0v+u0Dvk/tSNJJKiP2W5AV4/P4fsEZG2yivLfBkadAKnk1Mt/RYuq4+PQfxrFYL88JxUDsC3XnzqbTJT1q+x6ihXSC0YM4GrahFRiGrT+09CN/w2jh+6M2mLQ2bVkQqtBpgiuuIxKMg3r1gNNUxvvnQi3D/NzPqnxuwH1JVNpFZYJtA0CWk1VuyeH7InSbPoQgPq2S242jKPZjY3E+mLcBKLfAhytbmNm/w5IXwCWe98EOAZK+zD+MbShbDF5jkgUoG3aAPYNVXmE+AHESO0EzqR0QFXau4cR21FbODaacazN5jgobYOjgNpa7cGn/YdUov3azNFL+NtrbgyMTx0+bSLCBnsvMdmeMYWZlpa6/yjvYAPH31rL0bh/HvZN8NKfe6UzkQlEWg3w0p+Knt03sbZT9+Yx6Lr9bdiAviGtab2BGpbZgbzWOdL1+VoP9JvHQD1uXUtzLhoYIUuGw4N5/tZhdLXE13wN0TxGzFBjjGQDVP6kuVaGXOaGY9t6Q+0wYgZA101ZMJCV+vg793UH9o14JuAyuhoKCN9oz7TKEdRY0/3eywAijIEanS5xHTRC5yv3f5sENAUN92jvJ78DY9bInFf89Ojl/tUCRBXNV+E/mUMJHhT6/2jeZbeH9tAe2kN7aA/toT20h/bQHtpDe2gP7aE9tId+UO1/rCIzGxAjSq4AAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js" defer></script>
+<style>
+:root{
+ --ink:#18202c;--paper:#fffaf0;--blue:#306eff;--pink:#ffbfd9;--lav:#e6d7ff;--mint:#bdf3de;--yellow:#ffe375;--orange:#ffaf5f;--red:#ed526c;--white:#fff;--muted:#525866;--border:4px solid var(--ink);--shadow:6px 6px 0 var(--ink)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:16px/1.42 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--paper);background-image:radial-gradient(rgba(24,32,44,.11) 1.1px,transparent 1.1px);background-size:22px 22px}
+button,input,textarea{font:inherit}
+button{cursor:pointer;touch-action:manipulation}
+button:disabled{cursor:not-allowed;opacity:.45;filter:grayscale(.3)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:4px solid var(--blue);outline-offset:4px}
+[hidden]{display:none!important}
+.visually-hidden{position:absolute;clip:rect(0 0 0 0);width:1px;height:1px;overflow:hidden;white-space:nowrap}
+.topbar{max-width:1030px;margin:0 auto;padding:15px 15px 0;display:flex;align-items:center;gap:12px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand-mark{width:54px;height:54px;border:var(--border);border-radius:15px;background:var(--yellow);box-shadow:4px 4px 0 var(--ink);display:grid;place-items:center;font-size:27px;font-weight:1000;letter-spacing:-2px;transform:rotate(-5deg);flex:none}
+.brand-copy strong{display:block;font-weight:1000;font-size:clamp(21px,4vw,27px);line-height:1;letter-spacing:-.06em}
+.brand-copy small{display:block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-top:4px}
+.version-pill{background:#fff;border:3px solid var(--ink);border-radius:999px;padding:7px 11px;transform:rotate(4deg);font-size:12px;font-weight:1000;box-shadow:3px 3px 0 var(--ink);white-space:nowrap}
+.app{max-width:1030px;margin:0 auto;padding:20px 15px 45px}
+.workflow{display:grid;grid-template-columns:.8fr 1.2fr;gap:17px;align-items:stretch}
+.panel{position:relative;min-width:0;border:var(--border);border-radius:25px;background:white;box-shadow:var(--shadow);padding:18px 20px;margin:0 0 18px}
+.panel.profile-panel,.panel.work-panel{margin:0}
+.profile-panel{background:var(--lav)}
+.work-panel{background:var(--pink)}
+.z-panel{background:var(--mint)}
+.quotes-panel{background:var(--yellow)}
+.result-panel{background:#c5f1d3}
+.extra-panel{background:#fff;border-style:solid}
+.history-panel{background:#f0eaff}
+.panel-head{display:flex;align-items:center;gap:10px;margin:0 0 16px}
+.step{border:3px solid var(--ink);background:#fff;color:var(--ink);width:40px;height:40px;display:grid;place-items:center;border-radius:12px;font-weight:1000;font-size:21px;flex:none;box-shadow:3px 3px 0 var(--ink);transform:rotate(-7deg)}
+h1,h2,h3,p{margin-top:0}
+h2{font-weight:1000;font-size:clamp(19px,3.7vw,23px);letter-spacing:-.04em;line-height:1.15;margin:0}
+.mini-desc{font-size:13px;font-weight:650;margin:2px 0 0;color:#3c4451}
+.choice-grid{display:grid;gap:10px}
+.profile-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.work-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pop-button{border:3px solid var(--ink);background:#fff;border-radius:15px;box-shadow:4px 4px 0 var(--ink);font-weight:900;color:var(--ink);min-height:65px;padding:12px;position:relative;transition:transform .13s ease,box-shadow .13s ease,background .13s ease;text-align:left}
+.pop-button:hover:not(:disabled){transform:translateY(-2px);box-shadow:4px 6px 0 var(--ink)}
+.pop-button:active:not(:disabled){transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.choice{display:flex;gap:3px;flex-direction:column;justify-content:center;padding:12px 12px}
+.choice strong{font-size:16px;line-height:1.15}
+.choice small{font-size:11px;opacity:.7;font-weight:800}
+.choice[aria-pressed=true]{background:var(--ink);color:white;padding-right:30px}
+.choice[aria-pressed=true]::after{content:'✓';position:absolute;right:9px;top:10px;width:18px;height:18px;background:var(--yellow);color:var(--ink);border-radius:50%;font-size:13px;display:grid;place-items:center}
+.pop-line{margin:16px 0 0;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pop-label{font-weight:1000;text-transform:uppercase;font-size:12px;letter-spacing:.06em}
+.pop-mini{font-size:12px;font-weight:850;color:#3d4552}
+.workflow-status{border:3px solid var(--ink);background:#fff;padding:8px 13px;display:inline-flex;max-width:100%;border-radius:13px;font-size:12px;font-weight:1000;margin:16px 0 16px;box-shadow:3px 3px 0 var(--ink)}
+.z-panel{overflow:hidden}
+.comic-burst{position:absolute;right:30px;bottom:40px;transform:rotate(-12deg);font-size:34px;line-height:1;font-weight:1000;color:#f74362;text-shadow:3px 3px 0 var(--ink),-2px -2px 0 #fff;letter-spacing:-.09em;pointer-events:none}
+.parameters{display:grid;grid-template-columns:1.35fr .75fr;gap:12px;align-items:stretch}
+.z-field{min-width:0}
+.z-field label,.field-label{font-size:14px;font-weight:1000;display:block;margin-bottom:6px}
+.z-input-wrap{display:flex;align-items:stretch;gap:0;border:3px solid var(--ink);border-radius:15px;overflow:hidden;box-shadow:4px 4px 0 var(--ink);background:white}
+.zprefix{display:grid;place-items:center;font-size:21px;font-weight:1000;padding:0 11px;background:var(--ink);color:white}
+#zInput{width:100%;min-width:0;padding:12px 10px;border:0;border-radius:0;background:#fff;min-height:60px;font-size:clamp(23px,4vw,31px);font-weight:1000;color:var(--ink)}
+#zInput:disabled{background:#f3f5f7;color:#a5aab2}
+#zInput[aria-invalid=true]{background:#fff0ef}
+.nominal-box{border:3px solid var(--ink);border-radius:16px;background:white;box-shadow:4px 4px 0 var(--ink);padding:8px 11px;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.nominal-box small{display:block;font-size:12px;font-weight:900;color:#525866}
+.param-value{font-size:clamp(18px,3vw,26px);font-weight:1000;letter-spacing:-.02em;white-space:nowrap}
+.z-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:15px;flex-wrap:wrap}
+#resetZ{background:#fff9d8;min-height:42px;padding:8px 12px;font-size:13px}
+.microcopy{font-size:12px;color:#414956;font-weight:750}
+.field-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px;flex-wrap:wrap}
+.count-badge{border:3px solid var(--ink);border-radius:999px;padding:5px 10px;background:#fff;white-space:nowrap;font-size:12px;font-weight:1000}
+#quotes{display:block;width:100%;min-height:132px;resize:vertical;border:3px solid var(--ink);border-radius:17px;background:#fff;box-shadow:4px 4px 0 var(--ink);padding:14px 15px;font-size:21px;font-weight:750;line-height:1.5;color:var(--ink)}
+#quotes::placeholder{color:#9b9fa9;font-size:16px;font-weight:550}
+#quotes[aria-invalid=true]{background:#fff1f0;border-color:#d82841}
+.toolbar{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.toolbar small{font-size:12px;font-weight:750;color:#3a4150;max-width:620px}
+.button-cluster{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.button-cluster button{min-height:48px}
+#generate{background:#1ebd71;color:#101e23;display:block;position:relative;width:100%;min-height:72px;font-size:clamp(19px,4vw,24px);text-align:center;margin-top:17px;box-shadow:5px 5px 0 var(--ink)}
+#generate::after{content:' ➜';font-size:26px}
+#generate:hover{background:#27d081}
+#generate:active{transform:translate(4px,4px);box-shadow:1px 1px 0 var(--ink)}
+.action{background:#fff}
+.secondary-accent{background:#ffde5c}
+.ghost-blue{background:#dff0ff}
+.danger-soft{background:#ffe1e5}
+.primary{background:#23c878}
+.block{width:100%}
+[role=alert]{margin:0 0 18px}
+#message:not(:empty){border:4px solid var(--ink);border-radius:17px;background:#e6eeff;padding:12px;font-weight:850;box-shadow:4px 4px 0 var(--ink);white-space:pre-wrap}
+.result-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}
+.result-stamp{padding:7px 11px;border:3px solid var(--ink);background:#fff;border-radius:999px;font-size:12px;font-weight:1000;transform:rotate(5deg)}
+#stale:not(:empty){background:#ffe4b1;border:3px solid var(--ink);border-radius:14px;padding:12px;font-weight:950;white-space:pre-wrap}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;font:600 13px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;background:white;border:3px solid var(--ink);border-radius:14px;padding:13px;margin:12px 0}
+.table-wrap{overflow-x:auto;border:3px solid var(--ink);border-radius:16px;background:#fff}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+th,td{text-align:left;padding:11px 10px;border-bottom:2px solid #e0e6ed;overflow-wrap:anywhere}
+th{font-size:12px;text-transform:uppercase;background:#f0eaff;font-weight:900;letter-spacing:.04em}
+th:first-child{width:15%}
+tr:last-child td{border-bottom:0}
+tbody tr:nth-child(2n){background:#f9fbff}
+.z{font-size:21px;font-weight:1000;color:#1755ba}
+.note{padding:12px 14px;border:3px solid var(--ink);border-radius:15px;background:#fff3c5;font-size:13px;font-weight:800;margin:16px 0 0}
+#result .button-cluster{margin-top:16px}
+details summary{cursor:pointer;font-weight:950;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';width:26px;height:26px;border:3px solid var(--ink);border-radius:9px;display:grid;place-items:center;font-size:21px;line-height:1;flex:none;background:var(--yellow)}
+details[open] summary::after{content:'−'}
+.extra-panel summary,.history-panel summary{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.extra-panel summary strong,.history-panel summary strong{display:block;font-weight:1000;font-size:17px}
+.extra-panel summary small,.history-panel summary small{display:block;font-size:12px;font-weight:650;color:#525866;margin-top:4px}
+.expand-body{padding:15px 0 0}
+.expand-body p{font-size:13px;font-weight:650;color:#525866}
+#details{margin-top:15px}
+#details summary{padding:7px 0;display:flex;align-items:center;justify-content:space-between}
+#preview{max-width:100%;max-height:330px;display:block;border:3px solid var(--ink);border-radius:15px;background:#fff;margin:15px 0}
+#ocrStatus:not(:empty){padding:10px 12px;border:3px solid var(--ink);border-radius:13px;background:#fff1b7;margin-top:15px;font-size:13px;font-weight:850;white-space:pre-wrap}
+.ocrRow{display:grid;grid-template-columns:40px minmax(0,1fr) 58px;gap:8px;align-items:center;margin:9px 0}
+.ocrRow span{font-weight:900;text-align:center}
+.ocrRow input{width:100%;min-width:0;padding:10px;border:3px solid var(--ink);border-radius:12px;min-height:50px}
+.item{border:3px solid var(--ink);border-radius:15px;background:white;padding:12px;margin:10px 0;box-shadow:3px 3px 0 var(--ink)}
+.item p{font-size:13px;font-weight:850;margin:0 0 10px}
+.item button{border:2px solid var(--ink);border-radius:10px;background:#fff;padding:9px 11px;box-shadow:2px 2px 0 var(--ink);margin-right:9px;margin-bottom:8px;font-size:13px;font-weight:850}
+#new{min-height:60px;background:#fff;color:var(--ink)}
+.footer-note{text-align:center;color:#56606c;font-size:12px;font-weight:750;padding:10px 0 5px}
+@media(min-width:760px){.stage-two{display:grid;grid-template-columns:.85fr 1.15fr;gap:18px}.stage-two>.panel{margin-bottom:18px}}
+@media(max-width:759px){
+ .topbar{padding:13px 13px 0}
+ .app{padding:17px 13px 35px}.workflow-status{margin:0 0 16px}
+ .workflow,.stage-two{display:block}
+ .panel.profile-panel,.panel.work-panel{margin-bottom:17px}
+ .panel{padding:15px 16px;border-width:4px;margin-bottom:17px}
+ .work-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .work-grid .choice:last-child{grid-column:1/-1;min-height:54px}
+ .profile-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .work-grid .choice{min-height:64px}
+ .brand-mark{width:49px;height:49px}
+ .parameters{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
+ .comic-burst{display:none}
+ .z-foot .microcopy{max-width:195px}
+}
+@media(max-width:375px){
+ .topbar{gap:8px}.brand{gap:9px}.brand-copy strong{font-size:21px}.version-pill{font-size:11px;padding:6px 8px}
+ .profile-grid{gap:8px}
+ .choice{padding:11px 8px}.choice strong{font-size:14px}
+ .parameters{grid-template-columns:1fr}.nominal-box{min-height:64px}
+ .z-foot{align-items:stretch}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+@media print{
+ body{background:white;font-size:12px}
+ .topbar{padding:0 0 10px}.brand-mark{border:1px solid #000;box-shadow:none}.version-pill,.brand-copy small{display:none}
+ .app{padding:0;max-width:100%}
+ .workflow,.stage-two,.editor,.extra-panel,.history-panel,#new,.footer-note,#message,#stale,.workflow-status,.comic-burst{display:none!important}
+ section,.panel{background:white!important;box-shadow:none;border:0;padding:0;margin:0}
+ #result{display:block!important}
+ #result .button-cluster{display:none!important}
+ #result details{display:block}
+ table{border:1px solid #000}
+ .z{color:#000}
+ tr{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<!-- Compatibility markers for build.js versions 1.1/1.2/1.3: <title>Calcolo Z · Comic Pop</title>. Hidden legacy header below. -->
+<div hidden aria-hidden="true" style="display:none!important"><header><div class="hero-note"></div></header></div>
+<div class="topbar">
+ <div class="brand" aria-label="Calcolo Z, primo pezzo"><div class="brand-mark" aria-hidden="true">Z!</div><div class="brand-copy"><strong>CALCOLO Z</strong><small>Il tuo assistente primo pezzo</small></div></div>
+ <div class="version-pill">COMIC POP · 1.3</div>
+</div>
+<main class="app" id="main">
+ <div class="workflow">
+  <section class="panel profile-panel editor" id="profileSection">
+   <div class="panel-head"><span class="step">1</span><div><h2>Scegli il profilo</h2><p class="mini-desc">Quale stai lavorando?</p></div></div>
+   <div id="profiles" class="choice-grid profile-grid">
+    <button type="button" class="pop-button choice" data-profile="GTC-01" aria-pressed="false"><strong>GTC-01</strong><small>Profilo 01</small></button>
+    <button type="button" class="pop-button choice" data-profile="GTC-05" aria-pressed="false"><strong>GTC-05</strong><small>Profilo 05</small></button>
+   </div>
+  </section>
+  <section class="panel work-panel editor" id="workSection">
+   <div class="panel-head"><span class="step">2</span><div><h2>Che lavorazione?</h2><p class="mini-desc">Tocca per selezionare</p></div></div>
+   <div id="works" class="choice-grid work-grid">
+    <button type="button" class="pop-button choice" data-work="Lamatura punta gradino" aria-pressed="false"><strong>Lamatura</strong><small>Punta a gradino</small></button>
+    <button type="button" class="pop-button choice" data-work="Lamatura fresa" aria-pressed="false"><strong>Lamatura</strong><small>Con fresa</small></button>
+    <button type="button" class="pop-button choice" data-work="Svasatura" aria-pressed="false"><strong>Svasatura</strong><small>Quota svasatura</small></button>
+   </div>
+  </section>
+ </div>
+ <div id="workflowStatus" class="workflow-status" role="status" aria-live="polite">Scegli prima il profilo</div>
+ <div class="stage-two">
+  <section class="panel z-panel editor" id="zSection">
+   <div class="panel-head"><span class="step">3</span><div><h2>Regola la Z</h2><p class="mini-desc">Modificabile solo per questo calcolo</p></div></div>
+   <div class="parameters">
+    <div class="z-field"><label for="zInput">Z iniziale · mm</label><div class="z-input-wrap"><span class="zprefix">Z</span><input id="zInput" type="text" inputmode="decimal" aria-label="Z iniziale in millimetri" placeholder="—" autocomplete="off"></div></div>
+    <div class="nominal-box"><small>Nominale fisso</small><span id="nominal" class="param-value">—</span></div>
+   </div>
+   <div class="z-foot"><span class="microcopy">La Z torna standard al nuovo lavoro.</span><button id="resetZ" class="pop-button" type="button">↺ Ripristina Z</button></div>
+   <div class="comic-burst" aria-hidden="true">ZAP!</div>
+  </section>
+  <section class="panel quotes-panel editor" id="quotesSection">
+   <div class="panel-head"><span class="step">4</span><div><h2>Inserisci le quote</h2><p class="mini-desc">Incolla o scrivi tutte le misure</p></div></div>
+   <div class="field-top"><label class="field-label" for="quotes">Quote rilevate · mm</label><span id="quoteCount" class="count-badge" aria-live="polite">0 quote inserite</span></div>
+   <textarea id="quotes" spellcheck="false" placeholder="Es. 5,40; 5,20; 5,60; 5,25" aria-label="Quote rilevate in millimetri"></textarea>
+   <div class="toolbar"><small>Separa le quote con spazio, punto e virgola o invio. Virgola e punto per i decimali.</small><button type="button" id="clear" class="pop-button danger-soft">Svuota</button></div>
+   <button type="button" id="generate" class="pop-button primary">CALCOLA LE Z</button>
+  </section>
+ </div>
+ <p id="message" role="alert" aria-live="assertive"></p>
+ <section id="result" class="panel result-panel" hidden>
+  <div class="result-head"><div class="panel-head" style="margin:0"><span class="step">✓</span><div><h2>Ecco le tue Z!</h2><p class="mini-desc">Verifica e poi esporta</p></div></div><span class="result-stamp">RISULTATI</span></div>
+  <p id="stale"></p>
+  <pre id="meta"></pre>
+  <div class="table-wrap"><table><thead><tr><th>N.</th><th>Quota (mm)</th><th>Z corretta</th></tr></thead><tbody id="rows"></tbody></table></div>
+  <details id="details"><summary>Come sono state calcolate?</summary><pre id="operations"></pre></details>
+  <p class="note">Controlla tutte le correzioni, le quote e il riferimento Z prima di usarle sulla macchina.</p>
+  <div class="button-cluster"><button id="save" type="button" class="pop-button action">Salva</button><button id="csv" type="button" class="pop-button action">CSV</button><button id="print" type="button" class="pop-button action">Stampa / PDF</button><button id="edit" type="button" class="pop-button ghost-blue">Modifica quote</button></div>
+ </section>
+ <details class="panel extra-panel editor photo-section" id="photoTools">
+  <summary><span><strong>✦ Foto & OCR</strong><small>Strumento extra · apri solo se serve</small></span></summary>
+  <div class="expand-body">
+   <p>Lettura numeri sperimentale: con fogli tecnici e scritte a mano può sbagliare. Confronta sempre tutti i valori prima di importarli.</p>
+   <div class="button-cluster"><button id="galleryButton" type="button" class="pop-button ghost-blue">Dalla galleria</button><button id="cameraButton" type="button" class="pop-button ghost-blue">Scatta foto</button></div>
+   <input type="file" id="gallery" accept="image/*" aria-label="Scegli una foto" hidden><input type="file" id="photo" accept="image/*" capture="environment" aria-label="Scatta una foto" hidden>
+   <img id="preview" alt="Foto da leggere" hidden><div id="ocrStatus" role="status" aria-live="polite"></div><div id="ocrList"></div><button id="useOcr" class="pop-button primary block" type="button" hidden>Usa queste quote</button>
+  </div>
+ </details>
+ <details id="history" class="panel history-panel">
+  <summary><span><strong>◉ Storico dei calcoli</strong><small>Le compilazioni salvate sul tuo dispositivo</small></span></summary>
+  <div class="expand-body"><p>Lo storico rimane nel browser sullo stesso dispositivo. Non è sincronizzato e può sparire cancellando i dati del sito.</p><div id="historyList"></div></div>
+ </details>
+ <button id="new" type="button" class="pop-button block secondary-accent editor">+ NUOVA COMPILAZIONE</button>
+ <p class="footer-note">Calcolo Z · Uno strumento pratico per il primo pezzo. Verificare sempre i risultati prima dell’uso in macchina.</p>
+</main>
+<script>
+'use strict';
+    const $ = id => document.getElementById(id);
+    const DK = 'zcorr_photo_draft_v1';
+    const HK = 'zcorr_photo_history_v1';
+    const W = ['Lamatura punta gradino', 'Lamatura fresa', 'Svasatura'];
+    const P = {
+      'GTC-01': [[19, 5.4], [27, 5.4], [26.5, 7.7]],
+      'GTC-05': [[19, 6.4], [28, 6.4], [27, 7.7]]
+    };
+
+    let profile = '';
+    let work = '';
+    let result = null;
+    let resultDirty = false;
+    let ocrValues = [];
+    let photoUrl = '';
+    let ocrJob = 0;
+
+    const fmt = n => {
+      const s = Number(n).toFixed(2);
+      return (s === '-0.00' ? '0.00' : s).replace('.', ',');
+    };
+    const say = s => $('message').textContent = s;
+
+    function snapshot(){
+      return {
+        profile,
+        work,
+        text: $('quotes').value,
+        zText: $('zInput').value
+      };
+    }
+
+    function defaultParam(){
+      return P[profile]?.[W.indexOf(work)] || null;
+    }
+
+    function parseNumber(text){
+      if (typeof text !== 'string') return NaN;
+      const clean = text.trim().replace(',', '.');
+      if (!clean) return NaN;
+      if (!/^[+-]?\d+(?:\.\d+)?$/.test(clean)) return NaN;
+      return Number(clean);
+    }
+
+    function currentZ(){
+      const p = defaultParam();
+      if (!p) return NaN;
+      const z = parseNumber($('zInput').value);
+      return Number.isFinite(z) ? z : NaN;
+    }
+
+    function setDefaultZ(){
+      const p = defaultParam();
+      $('zInput').value = p ? fmt(p[0]) : '';
+      $('zInput').setAttribute('aria-invalid', 'false');
+    }
+
+    function updateResultActions(){
+      const active = !!result && !resultDirty;
+      $('save').disabled = !active;
+      $('csv').disabled = !active;
+      $('print').disabled = !active;
+      $('save').title = active ? '' : 'Rigenera il risultato prima di salvare.';
+      $('csv').title = active ? '' : 'Rigenera il risultato prima di esportare.';
+      $('print').title = active ? '' : 'Rigenera il risultato prima di stampare.';
+      $('stale').textContent = resultDirty ? 'Bozza modificata. Questo riepilogo è precedente: rigenera prima di salvarlo, esportarlo o usarlo.' : '';
+    }
+
+    function syncSelections(){
+      document.querySelectorAll('[data-profile]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.profile === profile)));
+      document.querySelectorAll('[data-work]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.work === work)));
+    }
+
+    function updateQuoteCount(){
+      const s = $('quotes').value;
+      if (!s.trim()) {
+        $('quoteCount').textContent = '0 quote inserite';
+        return;
+      }
+      try {
+        const n = parseQuotes(s).length;
+        $('quoteCount').textContent = n + (n === 1 ? ' quota pronta' : ' quote pronte');
+      } catch (e) {
+        $('quoteCount').textContent = 'Controlla il formato delle quote';
+      }
+    }
+
+    function updateSmartState(){
+      const status = $('workflowStatus');
+      if (!status) return;
+      const p = defaultParam();
+      const hasQuotes = $('quotes').value.trim().length > 0;
+      if (!profile) status.textContent = 'Scegli prima il profilo';
+      else if (!work) status.textContent = 'Ora scegli la lavorazione';
+      else if (!Number.isFinite(currentZ())) status.textContent = 'Controlla la Z iniziale';
+      else if (!hasQuotes) status.textContent = 'Inserisci le quote per calcolare';
+      else status.textContent = 'Tutto pronto: puoi calcolare!';
+    }
+
+    function persistDraft(){
+      try {
+        // Preserve the legacy draft and do not persist the temporary Z value.
+        const d = snapshot();
+        localStorage.setItem(DK, JSON.stringify({ profile: d.profile, work: d.work, text: d.text }));
+      } catch (e) {
+        say('Bozza non salvata localmente. Mantieni aperta la pagina ed esporta i risultati.');
+      }
+    }
+
+    function changed(markDirty = true){
+      const p = defaultParam();
+      $('nominal').textContent = p ? fmt(p[1]) + ' mm' : '—';
+      syncSelections();
+      if (result && markDirty) resultDirty = true;
+      $('zInput').disabled = !p;
+      $('resetZ').disabled = !p;
+      updateResultActions();
+      updateQuoteCount();
+      updateSmartState();
+      persistDraft();
+    }
+
+    function selectProfile(value){
+      profile = value;
+      setDefaultZ();
+      changed();
+    }
+
+    function selectWork(value){
+      work = value;
+      setDefaultZ();
+      changed();
+    }
+
+    function parseQuotes(text){
+      if (!text.trim()) throw Error('Inserisci almeno una quota.');
+      const t = text.trim().split(/[\s;]+/);
+      const bad = t
+        .map((s, i) => /^[+-]?\d+(?:[.,]\d+)?$/.test(s) && Number.isFinite(Number(s.replace(',', '.'))) ? null : 'Elemento ' + (i + 1) + ': ' + s)
+        .filter(Boolean);
+      if (bad.length) {
+        throw Error('Quote non valide o senza separazione chiara:\n' + bad.join('\n') + '\nUsa spazi, punti e virgola o ritorni a capo. Esempio: 5,4;5,2;5,6. Nessun dato è stato cancellato.');
+      }
+      return t.map((s, i) => ({ n: i + 1, input: s, quoted: Number(s.replace(',', '.')) }));
+    }
+
+    function build(){
+      try {
+        const p = defaultParam();
+        const d = snapshot();
+        if (!p) throw Error('Seleziona profilo e lavorazione.');
+
+        const z = parseNumber(d.zText);
+        if (!Number.isFinite(z)) {
+          $('zInput').setAttribute('aria-invalid', 'true');
+          throw Error('La Z iniziale non è valida. Inserisci un numero corretto, ad esempio 19 oppure 19,50.');
+        }
+        $('zInput').setAttribute('aria-invalid', 'false');
+
+        const rows = parseQuotes(d.text).map(x => {
+          const sc = d.work === 'Svasatura' ? x.quoted - p[1] : p[1] - x.quoted;
+          return { ...x, sc, zc: z - sc };
+        });
+
+        if (rows.some(x => !Number.isFinite(x.sc) || !Number.isFinite(x.zc))) {
+          throw Error('Valori non rappresentabili: controlla le quote.');
+        }
+
+        result = {
+          id: 'ZC-' + (crypto.randomUUID ? crypto.randomUUID() : Date.now() + '-' + Math.random().toString(36).slice(2)),
+          generatedAt: new Date().toISOString(),
+          profile: d.profile,
+          work: d.work,
+          z,
+          p: p[1],
+          results: rows,
+          source: d
+        };
+        resultDirty = false;
+        say('');
+        render();
+        return true;
+      } catch (e) {
+        say(e.message);
+        if (e.message.includes('Quote non valide') || e.message.includes('Inserisci almeno una quota')) {
+          $('quotes').setAttribute('aria-invalid', 'true');
+        }
+        updateResultActions();
+        return false;
+      }
+    }
+
+    function render(){
+      const r = result;
+      $('result').hidden = false;
+      $('quotes').setAttribute('aria-invalid', 'false');
+      $('meta').textContent =
+        'ID: ' + r.id + '\n' +
+        'Data e ora: ' + new Date(r.generatedAt).toLocaleString('it-IT') + '\n' +
+        r.profile + ' · ' + r.work + '\n' +
+        'Z iniziale usata: ' + fmt(r.z) + ' mm · Profondità nominale: ' + fmt(r.p) + ' mm\n' +
+        'Totale quote: ' + r.results.length;
+
+      $('rows').replaceChildren();
+      for (const x of r.results) {
+        const tr = document.createElement('tr');
+        [x.n, fmt(x.quoted), 'Z' + fmt(x.zc)].forEach((v, i) => {
+          const td = document.createElement('td');
+          td.textContent = v;
+          if (i === 2) td.className = 'z';
+          tr.append(td);
+        });
+        $('rows').append(tr);
+      }
+
+      $('operations').textContent = r.results.map(x =>
+        x.n + '. Scostamento = ' +
+        (r.work === 'Svasatura' ? fmt(x.quoted) + ' − ' + fmt(r.p) : fmt(r.p) + ' − ' + fmt(x.quoted)) +
+        ' = ' + fmt(x.sc) + ' mm; Z = ' + fmt(r.z) + ' − (' + fmt(x.sc) + ') = ' + fmt(x.zc)
+      ).join('\n');
+
+      updateResultActions();
+      $('result').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function history(){
+      const a = JSON.parse(localStorage.getItem(HK) || '[]');
+      if (!Array.isArray(a)) throw Error('Storico non valido');
+      return a;
+    }
+
+    function save(){
+      if (!result) {
+        say('Genera prima il riepilogo.');
+        return false;
+      }
+      if (resultDirty) {
+        say('Il riepilogo è precedente alla bozza attuale. Rigenera prima di salvare.');
+        return false;
+      }
+      try {
+        const a = history();
+        const i = a.findIndex(x => x.id === result.id);
+        const r = JSON.parse(JSON.stringify(result));
+        if (i < 0) a.unshift(r); else a[i] = r;
+        localStorage.setItem(HK, JSON.stringify(a));
+        list();
+        say('Risultato salvato.');
+        return true;
+      } catch (e) {
+        say('Salvataggio non riuscito. Nessun dato cancellato: esporta il CSV.');
+        return false;
+      }
+    }
+
+    function list(){
+      const box = $('historyList');
+      box.replaceChildren();
+      try {
+        const a = history();
+        if (!a.length) box.textContent = 'Nessuna compilazione salvata.';
+        for (const r of a) {
+          const div = document.createElement('div');
+          div.className = 'item';
+          const p = document.createElement('p');
+          p.textContent = new Date(r.generatedAt).toLocaleString('it-IT') + ' · ' + r.profile + ' · ' + r.work + ' · ' + r.results.length + ' quote';
+          div.append(p);
+
+          for (const title of ['Consulta', 'Riprendi quote', 'Elimina']) {
+            const b = document.createElement('button');
+            b.textContent = title;
+            b.onclick = () => {
+              if (title === 'Consulta') {
+                result = JSON.parse(JSON.stringify(r));
+                resultDirty = false;
+                render();
+                $('stale').textContent = 'Risultato salvato: la bozza attuale non è stata modificata.';
+              } else if (title === 'Riprendi quote') {
+                if ($('quotes').value.trim() && !confirm('Sostituire la bozza con le quote salvate?')) return;
+                profile = r.profile;
+                work = r.work;
+                $('quotes').value = r.source?.text ?? r.results.map(x => x.input ?? String(x.quoted)).join(' ');
+                $('zInput').value = typeof r.source?.zText === 'string' && r.source.zText.trim() ? r.source.zText : fmt(r.z);
+                syncSelections();
+                changed(false);
+                result = null;
+                resultDirty = false;
+                $('result').hidden = true;
+                $('quotes').focus();
+              } else if (confirm('Eliminare ' + r.id + '?')) {
+                try {
+                  localStorage.setItem(HK, JSON.stringify(history().filter(x => x.id !== r.id)));
+                  list();
+                } catch (e) {
+                  say('Eliminazione non riuscita.');
+                }
+              }
+            };
+            div.append(b);
+          }
+          box.append(div);
+        }
+      } catch (e) {
+        say('Storico locale non disponibile o non leggibile. Non è stato cancellato.');
+      }
+    }
+
+    function renderOcr(){
+      const box = $('ocrList');
+      box.replaceChildren();
+      ocrValues.forEach((x, i) => {
+        const row = document.createElement('div');
+        row.className = 'ocrRow';
+        const n = document.createElement('span');
+        n.textContent = (i + 1) + '.';
+        const inp = document.createElement('input');
+        inp.type = 'text';
+        inp.inputMode = 'decimal';
+        inp.value = x.value;
+        inp.setAttribute('aria-label', 'Quota riconosciuta ' + (i + 1));
+        inp.oninput = () => { x.value = inp.value; };
+        const del = document.createElement('button');
+        del.textContent = 'X';
+        del.setAttribute('aria-label', 'Elimina quota riconosciuta ' + (i + 1));
+        del.onclick = () => { ocrValues.splice(i, 1); renderOcr(); };
+        row.append(n, inp, del);
+        box.append(row);
+      });
+      $('useOcr').hidden = !ocrValues.length;
+    }
+
+    function busy(value){
+      $('galleryButton').disabled = value;
+      $('cameraButton').disabled = value;
+      $('gallery').disabled = value;
+      $('photo').disabled = value;
+    }
+
+    async function runOcr(file){
+      const job = ++ocrJob;
+      let worker;
+      $('ocrStatus').textContent = 'Avvio riconoscimento...';
+      ocrValues = [];
+      renderOcr();
+      busy(true);
+      try {
+        worker = await Tesseract.createWorker('eng');
+        await worker.setParameters({ tessedit_char_whitelist: '0123456789.,-' });
+        const { data: { text } } = await worker.recognize(file);
+        if (job !== ocrJob) return;
+        const found = text.match(/-?\d+(?:[.,]\d+)?/g) || [];
+        if (!found.length) {
+          $('ocrStatus').textContent = 'Nessun numero riconosciuto. Usa uno screenshot nitido oppure inserisci le quote manualmente.';
+          return;
+        }
+        ocrValues = found.map(v => ({ value: v }));
+        $('ocrStatus').textContent = 'Riconosciuti ' + found.length + ' valori. Verifica ogni quota: il conteggio non garantisce la correttezza.';
+        renderOcr();
+      } catch (e) {
+        if (job === ocrJob) $('ocrStatus').textContent = 'Riconoscimento non riuscito. Verifica la connessione o inserisci le quote manualmente.';
+      } finally {
+        if (worker) try { await worker.terminate(); } catch (e) {}
+        if (job === ocrJob) busy(false);
+      }
+    }
+
+    function selectImage(e){
+      const file = e.target.files[0];
+      e.target.value = '';
+      if (!file) return;
+      if (photoUrl) URL.revokeObjectURL(photoUrl);
+      photoUrl = URL.createObjectURL(file);
+      $('preview').src = photoUrl;
+      $('preview').hidden = false;
+      runOcr(file);
+    }
+
+    $('galleryButton').onclick = () => $('gallery').click();
+    $('cameraButton').onclick = () => $('photo').click();
+    $('gallery').addEventListener('change', selectImage);
+    $('photo').addEventListener('change', selectImage);
+
+    $('useOcr').onclick = () => {
+      const values = ocrValues.map(x => x.value.trim());
+      const bad = values.map((s, i) => /^[+-]?\d+(?:[.,]\d+)?$/.test(s) && Number.isFinite(Number(s.replace(',', '.'))) ? null : i + 1).filter(x => x !== null);
+      if (!values.length || bad.length) {
+        $('ocrStatus').textContent = bad.length ? 'Correggi le quote nelle righe: ' + bad.join(', ') + '. Nessun valore è stato importato o scartato.' : 'Nessuna quota da importare.';
+        return;
+      }
+      if (!confirm('Hai confrontato tutte le ' + values.length + ' quote con l’immagine? Conferma per importarle' + ($('quotes').value.trim() ? ' sostituendo le quote attuali' : '') + '.')) return;
+      $('quotes').value = values.join('\n');
+      changed();
+      $('quotes').focus();
+      say('Importate ' + values.length + ' quote. Verificale prima di generare le correzioni.');
+    };
+
+    document.querySelectorAll('[data-profile]').forEach(b => b.onclick = () => selectProfile(b.dataset.profile));
+    document.querySelectorAll('[data-work]').forEach(b => b.onclick = () => selectWork(b.dataset.work));
+    $('quotes').oninput = () => { $('quotes').setAttribute('aria-invalid', 'false'); changed(); };
+    $('zInput').oninput = () => { $('zInput').setAttribute('aria-invalid', 'false'); changed(); };
+    $('resetZ').onclick = () => {
+      const p = defaultParam();
+      if (!p) return;
+      setDefaultZ();
+      changed();
+    };
+
+    $('generate').onclick = build;
+    $('clear').onclick = () => {
+      if (confirm('Svuotare tutte le quote?')) {
+        $('quotes').value = '';
+        changed();
+      }
+    };
+    $('save').onclick = save;
+    $('edit').onclick = () => $('quotes').focus();
+
+    $('csv').onclick = () => {
+      if (!result) return;
+      if (resultDirty) {
+        say('Il riepilogo è precedente alla bozza attuale. Rigenera prima di esportare.');
+        return;
+      }
+      try {
+        const r = result;
+        const q = v => '"' + String(v).replace(/"/g, '""') + '"';
+        const data = [
+          ['ID', 'Data e ora', 'Profilo', 'Lavorazione', 'Z iniziale', 'Profondità nominale', 'Numero', 'Quota rilevata', 'Scostamento', 'Z corretta'],
+          ...r.results.map(x => [r.id, new Date(r.generatedAt).toLocaleString('it-IT'), r.profile, r.work, fmt(r.z), fmt(r.p), x.n, fmt(x.quoted), fmt(x.sc), fmt(x.zc)])
+        ];
+        const url = URL.createObjectURL(new Blob(['\ufeff' + data.map(a => a.map(q).join(';')).join('\r\n')], { type: 'text/csv;charset=utf-8' }));
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Correzioni_' + r.profile + '_' + r.work.replaceAll(' ', '_') + '_' + r.generatedAt.slice(0, 10) + '.csv';
+        document.body.append(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 30000);
+        say('Download richiesto: verifica il file scaricato.');
+      } catch (e) {
+        say('Esportazione non riuscita. I dati restano disponibili.');
+      }
+    };
+
+    $('print').onclick = () => {
+      if (!result) return;
+      if (resultDirty) {
+        say('Il riepilogo è precedente alla bozza attuale. Rigenera prima di stampare o salvare in PDF.');
+        return;
+      }
+      $('details').open = true;
+      window.print();
+    };
+
+    $('new').onclick = () => {
+      if ($('quotes').value.trim()) {
+        const choice = prompt('Scrivi SALVA per generare e salvare la bozza prima di ricominciare, NUOVA per scartarla, oppure Annulla per restare.');
+        if (choice === null) return;
+        if (choice.trim().toUpperCase() === 'SALVA') {
+          if (!build() || !save()) return;
+        } else if (choice.trim().toUpperCase() !== 'NUOVA') {
+          return;
+        }
+      }
+      result = null;
+      resultDirty = false;
+      $('result').hidden = true;
+      profile = '';
+      work = '';
+      $('quotes').value = '';
+      $('zInput').value = '';
+      ++ocrJob;
+      busy(false);
+      ocrValues = [];
+      renderOcr();
+      $('preview').hidden = true;
+      $('preview').removeAttribute('src');
+      if (photoUrl) URL.revokeObjectURL(photoUrl);
+      photoUrl = '';
+      $('photo').value = '';
+      $('gallery').value = '';
+      $('ocrStatus').textContent = '';
+      changed(false);
+      say('');
+      window.scrollTo(0, 0);
+    };
+
+    try {
+      const d = JSON.parse(localStorage.getItem(DK) || 'null');
+      if (d) {
+        profile = P[d.profile] ? d.profile : '';
+        work = W.includes(d.work) ? d.work : '';
+        $('quotes').value = typeof d.text === 'string' ? d.text : '';
+        if (profile && work) setDefaultZ();
+      }
+    } catch (e) {
+      say('Bozza locale non leggibile.');
+    }
+
+    $('zInput').disabled = true;
+    $('resetZ').disabled = true;
+    changed(false);
+    list();
+</script>
+</body>
+</html>
